@@ -1,0 +1,80 @@
+body {
+    --container-width: 80%;
+    --border-color: lightgray;
+    --border-thins: 1px;
+    --border-radius: 5px;
+    --padding-button-icon: 5px 15px 7px 15px;
+    --padding-input: 0.475rem 0.75rem;
+    --border-type: solid; 
+    --btn-primary: dodgerblue;
+    --input-margin-right: 7px;
+    --margin-bottom-1: 0.75rem;
+    --margin-bottom-2: 2rem; 
+    --width-input-3: calc(100% / 11 * 3 );
+  }
+
+.container {
+    width: var(--container-width);
+    margin: auto;
+}
+
+.margin-bottom-1 { 
+    margin-bottom: var(--margin-bottom-1)
+}
+
+.margin-bottom-2 { 
+    margin-bottom: var(--margin-bottom-2)
+}
+
+button {
+    border: var(--border-thins) var(--border-type) var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding-button-icon);
+}
+
+.btn-blue {
+    background-color: var(--btn-primary);
+}
+
+.form-group {
+    margin-bottom: var(--margin-bottom-1);
+}
+
+label {
+    display: block;
+}
+
+input {
+    border: var(--border-thins) var(--border-type) var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding-input);
+    margin-right: var(--input-margin-right);
+    width: var(--width-input-3);
+}
+
+.width-full {
+    width: 100%;
+}
+
+.margin {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.display-flex-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+.margin-vetical {
+    margin-bottom: 10px;
+}
+
+.alert-warning {
+    background-color: lemonchiffon;
+    width: 100%;
+    padding: var(--padding-input);
+    border-radius: var(--border-radius);
+    margin-top: var(--margin-bottom-1);
+}
