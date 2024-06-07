@@ -16,6 +16,7 @@ export function Page () {
         await fetch("http://localhost:"+port+"/facture/all")
         .then(res => res.json())
         .then(res => {
+            console.log("API : REQUETE GET")
             setData(res)
         })
     }

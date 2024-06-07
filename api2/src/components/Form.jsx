@@ -14,6 +14,7 @@ export function Form ({getData, err, setErr}) {
         })
         .then(res => res.json())
         .then(res => {
+            console.log("API : REQUETE POST")
             res.erreur !== null ? setErr(res.erreur)
             : setErr("facture enregistrée !")
             getData();

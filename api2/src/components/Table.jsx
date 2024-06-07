@@ -12,7 +12,8 @@ export function Table ({data, getData, err, setErr}) {
             method: "DELETE",
             headers: {"Content-Type" : "application/json"}
         }).then(res => {
-            if (res.status == 200) {
+            console.log("API : REQUETE DELETE")
+            if (res.status === 200) {
                 setErr("élément supprimé")
             } else {
                 setErr("Problème avec la suppression")
