@@ -24,17 +24,19 @@ public class ClientsController {
 
     @GetMapping("/all")
     public Iterable<Factures> getAll() {
+        System.out.println("API : REQUETE GET");
         return client.getAll();
     }
 
     @PostMapping("/")
     public Factures saveClient(@RequestBody Factures cli) {
-        System.out.println(cli);
+        System.out.println("API : REQUETE POST");
         return client.saveFactures(cli);
     }
 
     @DeleteMapping("/{id}")
     public HttpStatus delFacture(@PathVariable final Long id) {
+        System.out.println("API : REQUETE DELETE");
         HttpStatus status = HttpStatus.OK;
         try {
             client.deleteById(id);
