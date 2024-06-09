@@ -13,8 +13,8 @@ public class Clients {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="client_id")
-    private Long clientId;
+    @Column(name="facture")
+    private Long id;
     
     private String nom;
     private String prenom;
@@ -22,22 +22,20 @@ public class Clients {
     public Clients() {}
 
     public Clients(Long id, String nom, String prenom) {
-        this.clientId = id;
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
     }
 
 
-    public Long getClientId() {
-        return this.clientId;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
+    public void setId(Long clientId) {
+        this.id = clientId;
     }
  
-
-
     public String getNom() {
         return this.nom;
     }
@@ -55,5 +53,13 @@ public class Clients {
     }
 
 
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", nom='" + getNom() + "'" +
+            ", prenom='" + getPrenom() + "'" +
+            "}";
+    }
 
 }

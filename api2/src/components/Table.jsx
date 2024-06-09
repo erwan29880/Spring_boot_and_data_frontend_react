@@ -22,7 +22,7 @@ export function Table ({data, getData, err, setErr}) {
 
         })
     }
-
+ 
     const handleDelete = (id) => {
         setLoading(true);
         deleteById(id);
@@ -34,10 +34,10 @@ export function Table ({data, getData, err, setErr}) {
             {data.map((el, inc) => {
                 return (
                 <div className="display-flex-between margin-vetical" key={`ul${inc}`}>
-                    <Input texte={el.client3.prenom} inc={inc} numero={el.client3.prenom} id={`${el.numero}0`} />
-                    <Input texte={el.client3.nom} inc={inc} numero={el.client3.nom} id={`${el.numero}1`} />
-                    <Input texte={el.numero} inc={inc} numero={el.numero} id={`${el.numero}2`} />
-                    <button disabled={loading} className='btn-blue' onClick={() => handleDelete(el.ordersId)}><Trash /></button>
+                    <Input texte={el.prenom} inc={inc} numero={el.prenom} id={`${el.id}0`} />
+                    <Input texte={el.nom} inc={inc} numero={el.nom} id={`${el.id}1`} />
+                    <Input texte={el.id} inc={inc} numero={el.facture} id={`${el.id}2`} />
+                    <button disabled={loading} className='btn-blue' onClick={() => handleDelete(el.id)}><Trash /></button>
                 </div>
                 )
             })}

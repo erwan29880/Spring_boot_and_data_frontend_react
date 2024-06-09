@@ -25,16 +25,13 @@ export function Form ({getData, err, setErr}) {
         e.preventDefault();
         setLoading(true);
         const pdata = {
-            numero: e.target[2].value,
-            client3: {
+                id: 0,
                 nom: e.target[1].value,
                 prenom: e.target[0].value
-            }
         }
         postData(pdata)
         e.target[0].value = "";
         e.target[1].value = "";
-        e.target[2].value = "";
         setLoading(false);
     }
 
@@ -53,11 +50,6 @@ export function Form ({getData, err, setErr}) {
                 <div className="form-group">
                     <label htmlFor="nom">Nom</label>
                     <Input texte="" inc="form" numero="1" id="nom"/>
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="numero">Numéro de facture</label>
-                    <Input texte="" inc="form" numero="2" id="numero"/>
                 </div>
 
                 <button type="submit" disabled={loading} className="btn-blue">valider</button>

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.test1.demo.clients.entitys.Factures;
+import com.test1.demo.clients.entitys.Clients;
 import com.test1.demo.clients.service.ClientsService;
 
 
@@ -23,15 +23,15 @@ public class ClientsController {
     private ClientsService client;
 
     @GetMapping("/all")
-    public Iterable<Factures> getAll() {
+    public Iterable<Clients> getAll() {
         System.out.println("API : REQUETE GET");
         return client.getAll();
     }
 
     @PostMapping("/")
-    public Factures saveClient(@RequestBody Factures cli) {
+    public Clients saveClient(@RequestBody Clients cli) {
         System.out.println("API : REQUETE POST");
-        return client.saveFactures(cli);
+        return client.saveClients(cli);
     }
 
     @DeleteMapping("/{id}")
@@ -39,7 +39,7 @@ public class ClientsController {
         System.out.println("API : REQUETE DELETE");
         HttpStatus status = HttpStatus.OK;
         try {
-            client.deleteById(id);
+            client.deleClients(id);
         } catch (Exception e) {
             status = HttpStatus.BAD_REQUEST;
         }
